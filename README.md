@@ -18,6 +18,9 @@ pip install -e .            # into the same environment as mini-swe-agent
 pip install -e ".[agent]"   # or let it install mini-swe-agent 1.16.0 as well
 ```
 
+`mini-extra swebench-single`, used in the example below, also needs the `datasets`
+package, which mini-swe-agent 1.16.0 does not install by default: `pip install datasets`.
+
 ## Use
 
 Run the agent as usual, with `tooltrace run --out <file> --` in front:
