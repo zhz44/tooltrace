@@ -6,3 +6,5 @@ build/
 dist/
 *.bak
 traces/
+._*
+.DS_Store
