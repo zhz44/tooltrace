@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tooltrace"
+version = "0.1.0"
+description = "Record and summarise the shell commands a coding agent runs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.optional-dependencies]
+# The agent that the hook is written against.
+agent = ["mini-swe-agent==1.16.0"]
+test = ["pytest"]
+
+[project.scripts]
+tooltrace = "tooltrace.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
